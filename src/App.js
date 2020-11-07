@@ -9,6 +9,11 @@ import DangNhap from './Pages/DangNhap';
 import Home from './Pages/Home';
 import DangKy from './Pages/DangKy';
 import DemoHOC from './HOC/DemoHOC';
+import { HomeTemplate } from './Template/HomeTemplate';
+import { UserTemplate } from './Template/UserTemplate';
+import { AdminTemplate } from './Template/AdminTemplate';
+import QuanLyPhim from './Pages/QuanLyPhim';
+import QuanLyNguoiDung from './Pages/QuanLyNguoiDung';
 
 function App() {
   return (
@@ -18,13 +23,19 @@ function App() {
         <Switch>
           {/* Mặc định sẽ vào trang chủ */}
           <Route exact path='/' component={TrangChu} />
-          {/* người dùng gõ / đúng tên thì nhảy qa trang khác */}
-          <Route exact path='/trangchu' component={TrangChu} />
-          <Route exact path='/lienhe' component={LienHe} />
+
+          {/* HomeTemplate ở đây là để hiện thanh navbar trong Component nào muốn */}
+          <HomeTemplate exact path='/trangchu' Component={TrangChu}/>
+          <HomeTemplate exact path='/lienhe' Component={LienHe} />
+
+          <UserTemplate exact path='/dangky' Component={DangKy} />
+          <UserTemplate exact path='/dangnhap' Component={DangNhap} />
+
+          <AdminTemplate exact path='/admin/quanlyphim' Component={QuanLyPhim} />
+          <AdminTemplate exact path='/admin/quanlynguoidung' Component={QuanLyNguoiDung} />
+
           <Route exact path='/gioithieu' component={GioiThieu} />
-          <Route exact path='/dangky' component={DangKy} />
           <Route exact path='/demohoc' component={DemoHOC} />
-          <Route exact path='/dangnhap' component={DangNhap} />
           <Route exact path='/home' component={Home} />
 
           {/* Cách viết mới

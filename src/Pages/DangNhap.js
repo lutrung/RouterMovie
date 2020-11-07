@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
+import { useDispatch } from 'react-redux'
+import { dangNhapAction } from '../redux/actions/QuanLyNguoiDungAction'
 
 export default function DangNhap(props) {
+    const dispatch = useDispatch()
     const[userLogin, setUserLogin] = useState({taiKhoan: '', matKhau: ''})
     console.log(userLogin)
     const handleChange = (e)=>{
@@ -13,10 +16,11 @@ export default function DangNhap(props) {
     }
     const handleSubmit = (e)=>{
         e.preventDefault() // chặn sự kiện reload browser
-        if(userLogin.taiKhoan === 'haha' && userLogin.matKhau === 'haha'){
-            alert('Login Success')
-            props.history.push('/home')
-        }
+        // if(userLogin.taiKhoan === 'haha' && userLogin.matKhau === 'haha'){
+        //     alert('Login Success')
+        //     props.history.push('/home')
+        // }
+        dispatch(dangNhapAction(userLogin))
     }
     return (
         

@@ -5,21 +5,22 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // Cấu hình redux
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter,Router } from "react-router-dom";
 import { applyMiddleware, createStore } from "redux";
 import { Provider } from "react-redux";
 import { rootReducer } from "./redux/reducers/rootReducer";
 import reduxThunk from 'redux-thunk'
+import { history } from "./Util/history";
 
 const store = createStore(rootReducer,applyMiddleware(reduxThunk));
 // Cấu hinhg router
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router history={history}>
     <Provider store={store}>
       <App />
     </Provider>
-  </BrowserRouter>,
+  </Router>,
 
   document.getElementById("root")
 );
