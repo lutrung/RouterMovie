@@ -7,7 +7,7 @@ export const UserTemplate = (props)=>{
         window.onresize = function(){
             setHeight(window.innerHeight);
         }
-    },[]);
+    },[]);  
 
     const {Component,...restParams} = props;
     return(
@@ -15,7 +15,7 @@ export const UserTemplate = (props)=>{
             return(
                 <div className='row'>
                     <div className='col-6' style={{height}}>
-                        <img src='http://picsum.photos/2000/1000' style={{width:'100%', height:'100%'}} />
+                        <img src='http://picsum.photos/2000/1000' alt='' style={{width:'100%', height:'100%'}} />
                     </div>
                     <div className='col-6' >
                     <Component {...propsRoute} />

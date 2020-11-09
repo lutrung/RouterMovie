@@ -19,14 +19,14 @@ function App() {
   return (
     <div className="App">
       <>
-        <Header/>
+        {/* <Header/> */}
         <Switch>
           {/* Mặc định sẽ vào trang chủ */}
-          <Route exact path='/' component={TrangChu} />
+          <HomeTemplate exact path='/' Component={TrangChu}/>
 
           {/* HomeTemplate ở đây là để hiện thanh navbar trong Component nào muốn */}
           <HomeTemplate exact path='/trangchu' Component={TrangChu}/>
-          <HomeTemplate exact path='/lienhe' Component={LienHe} />
+          
 
           <UserTemplate exact path='/dangky' Component={DangKy} />
           <UserTemplate exact path='/dangnhap' Component={DangNhap} />
@@ -34,6 +34,7 @@ function App() {
           <AdminTemplate exact path='/admin/quanlyphim' Component={QuanLyPhim} />
           <AdminTemplate exact path='/admin/quanlynguoidung' Component={QuanLyNguoiDung} />
 
+          <Route exact path='/lienhe' component={LienHe} />
           <Route exact path='/gioithieu' component={GioiThieu} />
           <Route exact path='/demohoc' component={DemoHOC} />
           <Route exact path='/home' component={Home} />

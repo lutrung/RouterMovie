@@ -35,7 +35,7 @@ export const AdminTemplate = (props) => {
                 <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
                   <div className="pt-5 pb-5 text-center">
                     <img
-                      src="https://picsum.photos/50/50"
+                      src="https://picsum.photos/50/50" alt=''
                       style={{ borderRadius: "50%" }}
                     />
                     {!state.collapsed ? (
