@@ -1,6 +1,7 @@
 import Axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import {useSelector,useDispatch} from 'react-redux'
+import { NavLink } from 'react-router-dom';
 import { layDanhSachPhimAPI, layDanhSachPhimAPIAction } from '../redux/actions/QuanLyPhimAction';
 
 export default function TrangChu(props) {
@@ -32,6 +33,7 @@ export default function TrangChu(props) {
                         {/* onError dùng để khi ảnh trên server bị lỗi thì tự nó lấy ảnh khác trong link https://picsum.photos/300/300 */}
                         <div className="card-body">
                             <h4 className="card-title">{phim.tenPhim}</h4>
+                            <NavLink className='btn w-100 bg-dark text-light' to={'/chitietphim/'+ phim.maPhim}>Đặt vé</NavLink>
                         </div>
                     </div>
                 </div>

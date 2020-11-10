@@ -14,6 +14,8 @@ import { UserTemplate } from './Template/UserTemplate';
 import { AdminTemplate } from './Template/AdminTemplate';
 import QuanLyPhim from './Pages/QuanLyPhim';
 import QuanLyNguoiDung from './Pages/QuanLyNguoiDung';
+import ChiTietPhim from './Pages/ChiTietPhim';
+import PhongVe from './Pages/PhongVe';
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
           {/* HomeTemplate ở đây là để hiện thanh navbar trong Component nào muốn */}
           <HomeTemplate exact path='/trangchu' Component={TrangChu}/>
           
+          
+          <HomeTemplate exact path='/chitietphongve/:maLichChieu' Component={PhongVe}/>
+          <HomeTemplate exact path='/chitietphim/:maPhim' Component={ChiTietPhim}/>
 
           <UserTemplate exact path='/dangky' Component={DangKy} />
           <UserTemplate exact path='/dangnhap' Component={DangNhap} />
