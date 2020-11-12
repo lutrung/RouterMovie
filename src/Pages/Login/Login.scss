@@ -1,6 +1,6 @@
 .Login_content{
     height: 100%;
-    background-image: url(./poster.jpg);
+    background-image: url(../../assets/img/poster.jpg);
     position: relative;
     .overlay{
         height: 100%;
@@ -23,7 +23,7 @@
     overflow: hidden;
     .Login_pic {
         width: 65%;
-        background-image: url(./men.jpg);
+        background-image: url(../../assets/img/men.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -43,6 +43,11 @@
             font-size: 20px;
             margin: 0;
             padding: 0;
+        }
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 }

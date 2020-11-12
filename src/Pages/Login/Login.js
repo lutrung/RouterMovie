@@ -6,7 +6,7 @@ export default function Login(props) {
             <div className='overlay'></div>
             <div className='Login_loginPic'>
                 <div className='Login_pic'>
-
+                    {/* <img src='../../assets/img/men.jpg' /> */}
                 </div>
                 <div className='Login_login'>
                     <form>
@@ -19,6 +19,15 @@ export default function Login(props) {
                         <div className='form-group'>
                             <p>Mật khẩu:</p>
                             <input className='form-control' name='matKhau' placeholder='Mật khẩu' />
+                        </div>
+                        <div className='form-group text'>
+                            <div>
+                                <input type='checkbox' />
+                                <label style={{ margin: 0 }}>Ghi nhớ đăng nhập</label>
+                            </div>
+                            <div>
+                                <a href='/trangchu'>Quên mật khẩu?</a>
+                            </div>
                         </div>
                         <div className='form-group'>
                             <button className='btn btn-success' type='submit' >Đăng nhập</button>
