@@ -1,20 +1,20 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { dangNhapAction } from '../redux/actions/QuanLyNguoiDungAction'
 
 export default function DangNhap(props) {
     const dispatch = useDispatch()
-    const[userLogin, setUserLogin] = useState({taiKhoan: '', matKhau: ''})
+    const [userLogin, setUserLogin] = useState({ taiKhoan: '', matKhau: '' })
     console.log(userLogin)
-    const handleChange = (e)=>{
-        let {value,name} = e.target;
+    const handleChange = (e) => {
+        let { value, name } = e.target;
         // Thay đổi giá trị thuộc tính đang onChange
-        let newUserLogin = {...userLogin, [name]:value};
+        let newUserLogin = { ...userLogin, [name]: value };
         // Set lại state của userLogin = giá trị mới
         setUserLogin(newUserLogin)
         console.log(userLogin);
     }
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault() // chặn sự kiện reload browser
         // if(userLogin.taiKhoan === 'haha' && userLogin.matKhau === 'haha'){
         //     alert('Login Success')
@@ -23,24 +23,24 @@ export default function DangNhap(props) {
         dispatch(dangNhapAction(userLogin))
     }
     return (
-        
+
         <form className='container' onSubmit={handleSubmit}>
             <h1>Đăng nhập</h1>
             <div className='form-group'>
                 <p>Tài khoản</p>
                 <input className='form-control' name='taiKhoan' onChange={handleChange} />
             </div>
-            
+
             <div className='form-group'>
                 <p>Mật khẩu</p>
-                <input className='form-control' name='matKhau'  onChange={handleChange}/>
+                <input className='form-control' name='matKhau' onChange={handleChange} />
             </div>
 
             <div className='form-group'>
                 <button type='submit' >Đăng nhập</button>
             </div>
-            
-            
+
+
         </form>
     )
 }

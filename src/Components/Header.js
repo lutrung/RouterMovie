@@ -28,6 +28,12 @@ export default function Header(props) {
                     <li className="nav-item">
                         <NavLink className="nav-link" activeClassName='bg-dark text-white' to="/admin/quanlyphim">AdminQLND</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" activeClassName='bg-dark text-white' to="/login">Login</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" activeClassName='bg-dark text-white' to="/signup">Sign Up</NavLink>
+                    </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">

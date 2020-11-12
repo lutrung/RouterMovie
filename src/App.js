@@ -16,22 +16,24 @@ import QuanLyPhim from './Pages/QuanLyPhim';
 import QuanLyNguoiDung from './Pages/QuanLyNguoiDung';
 import ChiTietPhim from './Pages/ChiTietPhim';
 import PhongVe from './Pages/PhongVe';
+import Login from './Pages/Login/Login';
+import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ height: '100%' }} >
       <>
         {/* <Header/> */}
         <Switch>
           {/* Mặc định sẽ vào trang chủ */}
-          <HomeTemplate exact path='/' Component={TrangChu}/>
+          <HomeTemplate exact path='/' Component={TrangChu} />
 
           {/* HomeTemplate ở đây là để hiện thanh navbar trong Component nào muốn */}
-          <HomeTemplate exact path='/trangchu' Component={TrangChu}/>
-          
-          
-          <HomeTemplate exact path='/chitietphongve/:maLichChieu' Component={PhongVe}/>
-          <HomeTemplate exact path='/chitietphim/:maPhim' Component={ChiTietPhim}/>
+          <HomeTemplate exact path='/trangchu' Component={TrangChu} />
+
+
+          <HomeTemplate exact path='/chitietphongve/:maLichChieu' Component={PhongVe} />
+          <HomeTemplate exact path='/chitietphim/:maPhim' Component={ChiTietPhim} />
 
           <UserTemplate exact path='/dangky' Component={DangKy} />
           <UserTemplate exact path='/dangnhap' Component={DangNhap} />
@@ -43,6 +45,8 @@ function App() {
           <Route exact path='/gioithieu' component={GioiThieu} />
           <Route exact path='/demohoc' component={DemoHOC} />
           <Route exact path='/home' component={Home} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/signup' component={SignUp} />
 
           {/* Cách viết mới
         <Route path='/lienhe'>

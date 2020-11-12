@@ -15,7 +15,7 @@ export default function ChiTietPhim(props) {
         dispatch(await layChiTietPhimApiAction(maPhim))
     }, [])
 
-    
+
     return (
         <div className="container">
             <div className="row">
