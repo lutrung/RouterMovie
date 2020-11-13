@@ -39,8 +39,6 @@ export default function DangNhap(props) {
             <div className='form-group'>
                 <button type='submit' >Đăng nhập</button>
             </div>
-
-
         </form>
     )
 }

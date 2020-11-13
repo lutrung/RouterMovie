@@ -16,22 +16,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 1000px;
-    height: auto;
+    width: 60%;
     margin: auto;
     display: flex;
     background: rgb(255, 255, 255);
     border-radius: 20px;
-    box-shadow: 5px 7px 16px 5px gray;
+    box-shadow: 5px 7px 10px 5px gray;
     overflow: hidden;
     .SignUp_pic {
-        width: 65%;
+        width: 60%;
         background-image: url(../../assets/img/neon.jpg);
         background-position: center;
         background-size: cover;
     }
     .SignUp_login {
-        width: 35%;
+        width: 40%;
         text-align: center;
         padding: 15px;
         margin: auto;
@@ -40,12 +39,52 @@
             border-radius: 15%;
             background-color: white;
         }
-        p {
+        .title {
             font-weight: bold;
             text-align: left;
             font-size: 20px;
             margin: 0;
             padding: 0;
+        }
+        .error{
+            text-align: left;
+        }
+    }
+}
+@media only screen and (max-width: 375px){
+    .SignUp_loginPic{
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        .SignUp_pic{
+            display: none
+        }
+        .SignUp_login{
+            width: 100% !important;
+        }
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 768px){
+    .SignUp_loginPic{
+        width: 70%;
+        height: 80%;
+        .SignUp_pic{
+            display: none
+        }
+        .SignUp_login{
+            width: 100% !important;
+        }
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .SignUp_loginPic{
+        width: 80%;
+        height: 80%;
+        .SignUp_pic{
+            width: 35%;
+        }
+        .SignUp_login{
+            width: 65%;
         }
     }
 }

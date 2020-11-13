@@ -22,7 +22,7 @@ export default function Login(props) {
                         </div>
                         <div className='form-group text'>
                             <div>
-                                <input type='checkbox' />
+                                <input type='checkbox' className='mr-1' />
                                 <label style={{ margin: 0 }}>Ghi nhớ đăng nhập</label>
                             </div>
                             <div>
