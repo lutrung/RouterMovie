@@ -1,9 +1,28 @@
 #components-layout-demo-side .logo {
-    height: 32px;
-    margin: 16px;
-    background: rgba(255, 255, 255, 0.3);
-  }
-  
-  .site-layout .site-layout-background {
-    background: #fff;
-  }
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+.ghe {
+  width: 35px;
+  margin: 5px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+}
+.gheVip {
+  background-color: rgb(253, 179, 40);
+}
+.gheDaDat {
+  background: rgb(56, 54, 54);
+  color: white;
+  cursor: no-drop !important;
+}
+.gheDangDat {
+  background: green;
+  color: white;
+}
