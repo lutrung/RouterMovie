@@ -16,8 +16,6 @@ import QuanLyPhim from './Pages/QuanLyPhim';
 import QuanLyNguoiDung from './Pages/QuanLyNguoiDung';
 import ChiTietPhim from './Pages/ChiTietPhim';
 import PhongVe from './Pages/PhongVe';
-import Login from './Pages/Login/Login';
-import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -45,8 +43,6 @@ function App() {
           <Route exact path='/gioithieu' component={GioiThieu} />
           <Route exact path='/demohoc' component={DemoHOC} />
           <Route exact path='/home' component={Home} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/signup' component={SignUp} />
 
           {/* Cách viết mới
         <Route path='/lienhe'>

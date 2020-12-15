@@ -35,8 +35,6 @@ export default function ChiTietPhim(props) {
                             </tr>
                         </thead>
                     </table>
-
-
                 </div>
             </div>
             <div className="row mt-5">

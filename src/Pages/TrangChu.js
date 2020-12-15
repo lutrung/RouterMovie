@@ -1,12 +1,13 @@
 import Axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import {useSelector,useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import { layDanhSachPhimAPI, layDanhSachPhimAPIAction } from '../redux/actions/QuanLyPhimAction';
 
 export default function TrangChu(props) {
     // const [dsPhim, setDsPhim] = useState([])
     const dsPhim = useSelector((state) => state.QuanLyPhimReducer.dsPhim)
+    console.log("dsPhim", dsPhim);
     const dispatch = useDispatch();
     useEffect(() => {
         // var promise = Axios({
@@ -21,7 +22,7 @@ export default function TrangChu(props) {
         //     alert('Thất bại', err.response.data)
         // })
         dispatch(layDanhSachPhimAPIAction())
-    }, [])   
+    }, [])
 
 
     const renderPhim = () => {
@@ -33,7 +34,7 @@ export default function TrangChu(props) {
                         {/* onError dùng để khi ảnh trên server bị lỗi thì tự nó lấy ảnh khác trong link https://picsum.photos/300/300 */}
                         <div className="card-body">
                             <h4 className="card-title">{phim.tenPhim}</h4>
-                            <NavLink className='btn w-100 bg-dark text-light' to={'/chitietphim/'+ phim.maPhim}>Đặt vé</NavLink>
+                            <NavLink className='btn w-100 bg-dark text-light' to={'/chitietphim/' + phim.maPhim}>Đặt vé</NavLink>
                         </div>
                     </div>
                 </div>
